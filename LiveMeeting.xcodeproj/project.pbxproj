@@ -16,8 +16,15 @@
 		49552884263F25F8005EABDE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49552883263F25F8005EABDE /* ViewModel.swift */; };
 		49552889263F2634005EABDE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49552888263F2634005EABDE /* Bindable.swift */; };
 		4955288F263F269D005EABDE /* ViewControllerBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955288E263F269D005EABDE /* ViewControllerBindable.swift */; };
-		4955289C263F2757005EABDE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955289B263F2757005EABDE /* Person.swift */; };
 		495528A1263F27C2005EABDE /* PublishedDidSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495528A0263F27C2005EABDE /* PublishedDidSet.swift */; };
+		49577101264273B70033C752 /* LiveMeeting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 495770FF264273B70033C752 /* LiveMeeting.xcdatamodeld */; };
+		49577108264274070033C752 /* PersonData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49577106264274070033C752 /* PersonData+CoreDataClass.swift */; };
+		49577109264274070033C752 /* PersonData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49577107264274070033C752 /* PersonData+CoreDataProperties.swift */; };
+		49577119264274960033C752 /* PersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49577118264274960033C752 /* PersonEntity.swift */; };
+		49577122264274E40033C752 /* CoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49577121264274E40033C752 /* CoreDataEntity.swift */; };
+		4957712B264275160033C752 /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957712A264275160033C752 /* NSManagedObject.swift */; };
+		495771332642767A0033C752 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495771322642767A0033C752 /* CoreDataManager.swift */; };
+		4957713B264278C70033C752 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957713A264278C70033C752 /* Fetcher.swift */; };
 		499A7370263F2EE200694F9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A736E263F2EE200694F9F /* ViewController.swift */; };
 		499A7371263F2EE200694F9F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499A736F263F2EE200694F9F /* ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -55,8 +62,15 @@
 		49552883263F25F8005EABDE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		49552888263F2634005EABDE /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		4955288E263F269D005EABDE /* ViewControllerBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBindable.swift; sourceTree = "<group>"; };
-		4955289B263F2757005EABDE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		495528A0263F27C2005EABDE /* PublishedDidSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedDidSet.swift; sourceTree = "<group>"; };
+		49577100264273B70033C752 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		49577106264274070033C752 /* PersonData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		49577107264274070033C752 /* PersonData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		49577118264274960033C752 /* PersonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEntity.swift; sourceTree = "<group>"; };
+		49577121264274E40033C752 /* CoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntity.swift; sourceTree = "<group>"; };
+		4957712A264275160033C752 /* NSManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
+		495771322642767A0033C752 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4957713A264278C70033C752 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		499A736E263F2EE200694F9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		499A736F263F2EE200694F9F /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +125,8 @@
 			children = (
 				49552850263F25A2005EABDE /* AppDelegate.swift */,
 				49552852263F25A2005EABDE /* SceneDelegate.swift */,
+				49577129264274F70033C752 /* Extensions */,
+				49577120264274D60033C752 /* Core */,
 				4955288D263F2679005EABDE /* Bindable */,
 				49552896263F2710005EABDE /* ViewController */,
 				4955289A263F2749005EABDE /* Models */,
@@ -162,9 +178,46 @@
 		4955289A263F2749005EABDE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4955289B263F2757005EABDE /* Person.swift */,
+				495771172642748C0033C752 /* Entity */,
+				49577116264274810033C752 /* Data */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		49577116264274810033C752 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				495770FF264273B70033C752 /* LiveMeeting.xcdatamodeld */,
+				49577106264274070033C752 /* PersonData+CoreDataClass.swift */,
+				49577107264274070033C752 /* PersonData+CoreDataProperties.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		495771172642748C0033C752 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				49577118264274960033C752 /* PersonEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		49577120264274D60033C752 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				49577121264274E40033C752 /* CoreDataEntity.swift */,
+				495771322642767A0033C752 /* CoreDataManager.swift */,
+				4957713A264278C70033C752 /* Fetcher.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		49577129264274F70033C752 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4957712A264275160033C752 /* NSManagedObject.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +351,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				49552889263F2634005EABDE /* Bindable.swift in Sources */,
+				49577122264274E40033C752 /* CoreDataEntity.swift in Sources */,
 				49552851263F25A2005EABDE /* AppDelegate.swift in Sources */,
+				49577108264274070033C752 /* PersonData+CoreDataClass.swift in Sources */,
 				4955288F263F269D005EABDE /* ViewControllerBindable.swift in Sources */,
-				4955289C263F2757005EABDE /* Person.swift in Sources */,
 				495528A1263F27C2005EABDE /* PublishedDidSet.swift in Sources */,
+				49577101264273B70033C752 /* LiveMeeting.xcdatamodeld in Sources */,
+				49577119264274960033C752 /* PersonEntity.swift in Sources */,
+				4957713B264278C70033C752 /* Fetcher.swift in Sources */,
 				49552884263F25F8005EABDE /* ViewModel.swift in Sources */,
+				4957712B264275160033C752 /* NSManagedObject.swift in Sources */,
 				499A7370263F2EE200694F9F /* ViewController.swift in Sources */,
 				49552853263F25A2005EABDE /* SceneDelegate.swift in Sources */,
+				495771332642767A0033C752 /* CoreDataManager.swift in Sources */,
+				49577109264274070033C752 /* PersonData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		495770FF264273B70033C752 /* LiveMeeting.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49577100264273B70033C752 /* Model.xcdatamodel */,
+			);
+			currentVersion = 49577100264273B70033C752 /* Model.xcdatamodel */;
+			path = LiveMeeting.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49552845263F25A2005EABDE /* Project object */;
 }

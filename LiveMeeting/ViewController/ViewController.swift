@@ -14,8 +14,8 @@ class ViewController: ViewControllerBindable<ViewModel> {
     override func bindViewModel() {
         viewModel.$personAge
             .filter { $0 == nil }
-            .sink(receiveValue: { _ in
-                print("this is empty")
+            .sink(receiveValue: { value in
+                print("age is empty")
             }).store(in: &cancellable)
         
         viewModel.$personAge
@@ -25,6 +25,8 @@ class ViewController: ViewControllerBindable<ViewModel> {
                 self.printFullName()
             }
             .store(in: &cancellable)
+        
+        printFullName()
         
     }
     

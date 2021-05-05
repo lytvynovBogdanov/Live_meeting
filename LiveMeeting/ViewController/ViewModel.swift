@@ -7,16 +7,20 @@
 
 import Foundation
 
-var person = Person(name: "Bob", age: 25)
-
 class ViewModel {
-    @PublishedDidSet<Int?>(nil, didSet: { value in
-    guard let value = value else { return }
-        person.age = value
-    }) var personAge
+    @PublishedDidSet<Int?>(nil) var personAge
     
-    var dd = 0
+    let person: PersonEntity
+    
     init() {
+        self.person = PersonEntity(object: Fetcher<PersonData>().items.first)
+        
+        _personAge.didSet = { [weak self] value in
+            guard let value = value,
+                  let self = self else { return }
+            self.person.age = value
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.personAge = 26
         }

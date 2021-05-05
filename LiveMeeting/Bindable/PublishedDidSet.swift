@@ -15,7 +15,7 @@ public final class PublishedDidSet<Value> {
         }
     }
     private let subject: CurrentValueSubject<Value, Never>
-    private let didSet: ((Value) -> Void)?
+    public var didSet: ((Value) -> Void)?
 
     public init(_ value: Value, didSet: ((Value) -> Void)? = nil) {
         self.value = value
